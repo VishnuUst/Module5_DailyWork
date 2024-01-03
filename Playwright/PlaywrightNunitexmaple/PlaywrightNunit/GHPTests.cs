@@ -18,7 +18,10 @@ namespace PlaywrightNunit
         //    using var playwright = await Playwright.CreateAsync();
 
         //    //launch browser
-        //    await using var browser = await playwright.Chromium.LaunchAsync();
+        //    await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+        //    {
+        //        Headless = false
+        //    });
 
         //    //page instance
         //    var context = await browser.NewContextAsync();
@@ -46,7 +49,7 @@ namespace PlaywrightNunit
         [Test]
         public async Task Test2()
         {
-            
+
 
             Console.WriteLine("Opened browser");
 
@@ -65,11 +68,12 @@ namespace PlaywrightNunit
             //Console.WriteLine("Clicked");
             await Page.Locator("(//input[@value='Google Search'])[2]").ClickAsync();
             Console.WriteLine("Clicked");
-            
-            title = await Page.TitleAsync();
-            Console.WriteLine(title);
 
-            Assert.That(title, Does.Contain("selenium"));
+            //title = await Page.TitleAsync();
+            //Console.WriteLine(title);
+
+            //Assert.That(title, Does.Contain("selenium"));
+            await Expect(Page).ToHaveTitleAsync("selenium - Google Search");
 
         }
     }

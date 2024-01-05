@@ -15,7 +15,14 @@ namespace Eaap_test
         {
             Console.WriteLine("Opened browser");
 
-            await Page.GotoAsync("http://eaapp.somee.com/");
+            await Page.GotoAsync("http://eaapp.somee.com/",
+                new Microsoft.Playwright.PageGotoOptions
+                {
+                    Timeout = 7000,
+                    WaitUntil = Microsoft.Playwright.WaitUntilState.DOMContentLoaded
+                }
+                );
+
 
             Console.WriteLine("Page loaded");
         }
@@ -44,6 +51,7 @@ namespace Eaap_test
             await btnLogin.ClickAsync();
 
             await Expect(Page).ToHaveTitleAsync("Home - Execute Automation Employee App");
+          
             await Console.Out.WriteLineAsync("Login succefully!!");
             await Page.GetByText("Employee Details").ClickAsync();
             await Expect(Page).ToHaveURLAsync("http://eaapp.somee.com/EmployeeDetails");

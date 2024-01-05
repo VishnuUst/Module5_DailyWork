@@ -127,11 +127,12 @@ namespace PlaywrightWith_Api
 
         }
         [Test]
-        public async Task DeleteUser()
+        [TestCase(2)]
+        public async Task DeleteUser(int id)
 
         {
 
-            var postresponse = await reqRescontext.DeleteAsync(url: "users/2");
+            var postresponse = await reqRescontext.DeleteAsync(url: "users/" + id);
                 
             await Console.Out.WriteLineAsync("Res: \n" + postresponse.ToString());
             await Console.Out.WriteLineAsync("Code:\n" + postresponse.Status);

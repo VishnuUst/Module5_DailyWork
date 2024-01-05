@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eaap_test", "Eaap_test\Eaap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Playwright_Pom_Struct", "Playwright_Pom_Struct\Playwright_Pom_Struct.csproj", "{D4E10152-681B-48F8-970C-81CB53B8B782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaywrightWith_Api", "PlaywrightWith_Api\PlaywrightWith_Api.csproj", "{5ABDD1C3-8187-4017-A089-9E2C75CB0B1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaywrightWith_Api", "PlaywrightWith_Api\PlaywrightWith_Api.csproj", "{5ABDD1C3-8187-4017-A089-9E2C75CB0B1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment_ApiPlaywright", "Assignment_ApiPlaywright", "{F4004FBA-4573-403E-9259-3B27B24F8BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholder", "JsonPlaceholder\JsonPlaceholder.csproj", "{CDECBC2F-F349-45C2-9EE2-70C4D3CC5974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{5ABDD1C3-8187-4017-A089-9E2C75CB0B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ABDD1C3-8187-4017-A089-9E2C75CB0B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ABDD1C3-8187-4017-A089-9E2C75CB0B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDECBC2F-F349-45C2-9EE2-70C4D3CC5974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDECBC2F-F349-45C2-9EE2-70C4D3CC5974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDECBC2F-F349-45C2-9EE2-70C4D3CC5974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDECBC2F-F349-45C2-9EE2-70C4D3CC5974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDECBC2F-F349-45C2-9EE2-70C4D3CC5974} = {F4004FBA-4573-403E-9259-3B27B24F8BF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAE1E111-4218-4889-830B-2D0178E2B157}
